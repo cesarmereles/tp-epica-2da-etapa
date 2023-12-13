@@ -9,6 +9,11 @@ const commentSchema = new Schema({
     ref: "User",
     required: true,
   },
+  post: {
+    type: Types.ObjectId,
+    ref: "Post",
+    required: true,
+  },
 });
 
 export const CommentModel = model("Comment", commentSchema);
